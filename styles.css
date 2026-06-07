@@ -175,7 +175,12 @@ input:focus, textarea:focus, select:focus { border-color: var(--line-strong); bo
     .hero-console { order: 2; width: 100%; justify-self: stretch; }
     .signal-metrics { grid-template-columns: 1fr; }
     .hero-panel, .signal-card, .matrix, .contact-card { max-width: 100%; overflow: hidden; }
-    .matrix-cell, .matrix-cell:nth-child(3n) { border-right: none; }
+    .matrix-grid { display: block; padding: 0; overflow: visible; background: transparent; border: none; }
+    .matrix-title { display: none; }
+    .matrix-cell { min-height: auto; width: 100%; padding: 14px 16px 16px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(7,10,16,0.72); }
+    .matrix-cell::before { content: attr(data-label); display: block; margin-bottom: 8px; color: var(--coral-2); font-family: var(--font-mono); font-size: 0.63rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .matrix-cell:nth-child(4), .matrix-cell:nth-child(7), .matrix-cell:nth-child(10) { margin-top: 12px; border-top: 1px solid rgba(255,90,69,0.32); background: linear-gradient(135deg, rgba(255,90,69,0.105), rgba(7,10,16,0.78)); }
+    .matrix-cell:nth-child(6), .matrix-cell:nth-child(9), .matrix-cell:nth-child(12) { margin-bottom: 14px; border-bottom: 1px solid rgba(255,90,69,0.22); }
     .partner-card { min-height: auto; }
     .partner-portrait { min-height: 300px; }
     .partner-portrait img { width: clamp(190px, 34vw, 245px); height: clamp(190px, 34vw, 245px); }
@@ -191,6 +196,8 @@ input:focus, textarea:focus, select:focus { border-color: var(--line-strong); bo
     .hero-actions, .badge-row { flex-direction: column; }
     .btn-primary, .btn-secondary { width: 100%; }
     .signal-card, .pillar-card, .intel-card, .matrix-header, .rabelus-layer, .contact-info-panel, .themed-form { padding: 20px; }
+    .matrix-header h2 { font-size: clamp(1.45rem, 8vw, 2rem); line-height: 1.08; }
+    .matrix-cell { font-size: 0.98rem; line-height: 1.55; }
     .red-box-header { margin-top: 54px; }
     .partner-portrait { min-height: 260px; }
     .partner-portrait img { width: clamp(176px, 58vw, 220px); height: clamp(176px, 58vw, 220px); }
