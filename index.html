@@ -3,438 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broaden Capital — Gestão de Ativos Alternativos</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Fonts -->
+    <meta name="description" content="Protótipo institucional premium da Broaden Capital, criado para demonstrar uma presença digital orientada a ativos alternativos, inteligência de mercado e capital estratégico.">
+    <title>Broaden Capital — Alternative Capital Intelligence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="progress-line" id="progress-line" aria-hidden="true"></div>
 
-    <!-- Ambient Mesh Background Spheres (Layer 1 Background) -->
-    <div class="mesh-background">
+    <div class="mesh-background" aria-hidden="true">
         <div class="mesh-sphere sphere-1"></div>
         <div class="mesh-sphere sphere-2"></div>
         <div class="mesh-sphere sphere-3"></div>
+        <div class="mesh-sphere sphere-4"></div>
     </div>
-    
-    <!-- Transparent Background particles (Layer 2 Background) -->
-    <canvas id="particles-canvas"></canvas>
 
-    <!-- Failsafe Master Mobile Backdrop Menu Overlay -->
-    <div class="menu-overlay" id="menu-overlay"></div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <div class="menu-overlay" id="menu-overlay" aria-hidden="true"></div>
 
-    <!-- Header / Nav (Strictly Square Floating Glassmorphic Overlay) -->
     <header class="main-header glass-card">
-        <div class="logo">
-            <span>BROADEN</span><span class="highlight">.CAPITAL</span>
-        </div>
-        
-        <button class="menu-toggle" id="mobile-menu-btn" aria-label="Menu">
+        <a href="#top" class="brand-lockup" aria-label="Broaden Capital — início">
+            <span class="brand-mark"><img src="assets/broaden-logo-white.svg" alt="Broaden Capital"></span>
+            <span class="brand-pulse" aria-hidden="true"></span>
+        </a>
+
+        <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        
-        <nav class="nav-links" id="nav-menu">
-            <a href="#about" class="nav-link-item">A Gestora</a>
-            <a href="#pillars" class="nav-link-item">Estratégias</a>
+
+        <nav class="nav-links" id="nav-menu" aria-label="Navegação principal">
+            <a href="#pillars" class="nav-link-item">Teses</a>
+            <a href="#intelligence" class="nav-link-item">Intelligence</a>
             <a href="#team" class="nav-link-item">Sócios</a>
-            <a href="#contact" class="btn-primary-nav nav-link-item">Fale com os Sócios</a>
+            <a href="#contact" class="btn-primary-nav nav-link-item">Conexão Institucional</a>
         </nav>
     </header>
 
-    <main class="container">
-
-        <!-- Hero Section -->
+    <main class="container" id="top">
         <section class="hero-section reveal-on-scroll" id="about">
-            <div class="badge-ribbon">
-                <span class="mono-badge glass-card"><span class="pulse-dot"></span>CVM REGISTERED</span>
+            <div class="badge-row">
+                <span class="mono-badge glass-card"><span class="pulse-dot"></span>CVM REGISTERED MANAGER</span>
+                <span class="mono-badge muted glass-card">PRIVATE MARKETS · BRAZIL · 2026</span>
             </div>
 
-            <h1 class="hero-title tracking-tight">
-                ARCHITECTING<br>
-                <span class="gradient-text">ALTERNATIVE CAPITAL</span>
-            </h1>
-            
-            <p class="hero-subtitle">
-                A Broaden Capital une a governança e processos analíticos do Private Equity tradicional à escalabilidade tática de teses de infraestrutura e criptotecnologia exponencial.
-            </p>
-            
-            <div class="hero-actions">
-                <a href="#team" class="btn-primary glow-button">Ver Portfólio & Teses</a>
-                <a href="#contact" class="btn-secondary">Parcerias Estratégicas</a>
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Alternative Capital Intelligence</p>
+                    <h1 class="hero-title tracking-tight">
+                        ARCHITECTING<br>
+                        <span class="gradient-text">ALTERNATIVE CAPITAL</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        A Broaden Capital combina a disciplina de private equity, a leitura macro de ciclos privados e a aplicação pragmática de tecnologia para estruturar teses de crescimento, governança e resiliência em empresas privadas.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#intelligence" class="btn-primary glow-button">Explorar sinais de mercado</a>
+                        <a href="#contact" class="btn-secondary">Fale com os sócios</a>
+                    </div>
+                </div>
+
+                <aside class="hero-console glass-card" aria-label="Painel de tese institucional">
+                    <div class="console-topline">
+                        <span>LIVE THESIS FRAME</span>
+                        <span class="console-status">ACTIVE</span>
+                    </div>
+                    <div class="console-signal">
+                        <span class="signal-label">Macro</span>
+                        <strong>PIB Brasil 2026 revisto para 1,8%</strong>
+                        <small>Ipea aponta crescimento moderado, inflação projetada em 4,2% e investimentos ainda pressionados.</small>
+                    </div>
+                    <div class="console-signal">
+                        <span class="signal-label">Growth</span>
+                        <strong>Brasil lidera VC LatAm em volume absoluto</strong>
+                        <small>US$ 2,032 bi captados por startups brasileiras em 2025, segundo Cuantico VP.</small>
+                    </div>
+                    <div class="console-signal">
+                        <span class="signal-label">Tech</span>
+                        <strong>IA concentra 61% do valor global de VC</strong>
+                        <small>A OCDE registra US$ 258,7 bi em VC para empresas de IA em 2025.</small>
+                    </div>
+                </aside>
             </div>
         </section>
 
-        <!-- Stats Section (3 Columns Grid - Patrimonio Card Removed) -->
-        <section class="stats-section reveal-on-scroll">
-            <div class="stats-grid">
-                <div class="stat-card glass-card">
-                    <span class="stat-number">03</span>
-                    <span class="stat-label">FUNDOS MAPEADOS CVM</span>
-                </div>
-                <div class="stat-card glass-card">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">ANOS DE TRACK RECORD SÓCIOS</span>
-                </div>
-                <div class="stat-card glass-card">
-                    <span class="stat-number">03</span>
-                    <span class="stat-label">SÓCIOS SENIORS</span>
-                </div>
-            </div>
+        <section class="signal-bar reveal-on-scroll" aria-label="Sinais estratégicos de mercado">
+            <article class="signal-card glass-card">
+                <span class="stat-number">1,8%</span>
+                <span class="stat-label">PIB Brasil 2026 · Ipea</span>
+                <p>Crescimento moderado, juros ainda relevantes e investimento produtivo seletivo.</p>
+            </article>
+            <article class="signal-card glass-card">
+                <span class="stat-number">US$2,0B</span>
+                <span class="stat-label">VC Brasil 2025 · Cuantico VP</span>
+                <p>Capital volta mais seletivo, concentrado em scale-ups com validação real.</p>
+            </article>
+            <article class="signal-card glass-card">
+                <span class="stat-number">61%</span>
+                <span class="stat-label">AI VC Global · OECD</span>
+                <p>IA deixa de ser vertical e se torna camada de produtividade de portfólio.</p>
+            </article>
         </section>
 
-        <!-- Section Title (Branded Red Box Header) -->
         <div class="red-box-header glass-card reveal-on-scroll">
             <div class="box-dot"></div>
-            <h2>Focos de Atuação & Estratégia de Alocação</h2>
+            <h2>Focos de atuação & estratégia de alocação</h2>
         </div>
 
-        <!-- Pillars Section (Numbered Glass Cards with Glorious Neon Badges) -->
         <section class="pillars-section reveal-on-scroll" id="pillars">
+            <div class="section-intro">
+                <p>A tese central é construir pontes entre capital paciente, governança operacional e tecnologias que tornam empresas privadas mais eficientes, auditáveis e preparadas para ciclos de liquidez seletiva.</p>
+            </div>
             <div class="pillars-grid">
-                <!-- Pillar 01 -->
-                <div class="pillar-card glass-card hover-lift">
+                <article class="pillar-card glass-card hover-lift">
                     <div class="pillar-num-badge">01</div>
                     <span class="pillar-sublabel">PRIVATE EQUITY</span>
-                    <h3 class="pillar-title">Negócios Tradicionais</h3>
-                    <p class="pillar-desc">
-                        Aceleração de empresas de médio porte com fluxos de caixa previsíveis, aplicando processos maduros de governança e reengenharia de rentabilidade corporativa.
-                    </p>
+                    <h3 class="pillar-title">Negócios tradicionais com disciplina de execução</h3>
+                    <p class="pillar-desc">Empresas de médio porte, fluxos de caixa verificáveis e oportunidades de eficiência operacional demandam governança, melhoria de margens e preparação para janelas de liquidez mais exigentes.</p>
                     <div class="pillar-tags">
-                        <span class="mono-tag">Private Equity</span>
+                        <span class="mono-tag">Governance</span>
                         <span class="mono-tag">Cash Flow</span>
+                        <span class="mono-tag">M&A Readiness</span>
                     </div>
-                </div>
-                <!-- Pillar 02 -->
-                <div class="pillar-card glass-card hover-lift">
+                </article>
+
+                <article class="pillar-card glass-card hover-lift">
                     <div class="pillar-num-badge">02</div>
                     <span class="pillar-sublabel">GROWTH STAGE</span>
-                    <h3 class="pillar-title">Negócios Disruptivos</h3>
-                    <p class="pillar-desc">
-                        Desenvolvimento de teses disruptivas de tecnologia e atração de venture capital estratégico para startups em estágios maduros no ecossistema global de inovação.
-                    </p>
+                    <h3 class="pillar-title">Scale-ups, venture debt e crescimento seletivo</h3>
+                    <p class="pillar-desc">O capital de crescimento volta a premiar tração, eficiência e unit economics. A Broaden pode dialogar com startups maduras, empresários e investidores que buscam estruturas além do equity tradicional.</p>
                     <div class="pillar-tags">
-                        <span class="mono-tag">Growth Tech</span>
-                        <span class="mono-tag">Venture Capital</span>
+                        <span class="mono-tag">Scale-up</span>
+                        <span class="mono-tag">Venture Debt</span>
+                        <span class="mono-tag">Strategic Capital</span>
                     </div>
-                </div>
-                <!-- Pillar 03 -->
-                <div class="pillar-card glass-card hover-lift">
+                </article>
+
+                <article class="pillar-card glass-card hover-lift">
                     <div class="pillar-num-badge">03</div>
                     <span class="pillar-sublabel">DEEP TECH & WEB3</span>
-                    <h3 class="pillar-title">Deep Tech & DeFi</h3>
-                    <p class="pillar-desc">
-                        Mapeamento ativo de projetos escaláveis com infraestrutura tecnológica de ponta, ligando as finanças tradicionais (TradFi) à inovação em descentralização e Web3.
-                    </p>
+                    <h3 class="pillar-title">Tecnologia aplicada a ativos reais</h3>
+                    <p class="pillar-desc">IA, tokenização, infraestrutura digital e Web3 deixam de ser narrativas isoladas quando conectadas a produtividade, compliance, ativos reais e novos modelos de acesso a capital privado.</p>
                     <div class="pillar-tags">
-                        <span class="mono-tag font-bold">Tokenization</span>
-                        <span class="mono-tag">Assets</span>
+                        <span class="mono-tag">AI Infrastructure</span>
+                        <span class="mono-tag">Tokenization</span>
+                        <span class="mono-tag">Real Assets</span>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <!-- Section Title - Partners -->
-        <div class="red-box-header glass-card reveal-on-scroll" id="team">
+        <div class="red-box-header glass-card reveal-on-scroll" id="intelligence">
             <div class="box-dot"></div>
-            <h2>Corpo de Sócios e Executivos</h2>
+            <h2>Market Intelligence Layer</h2>
         </div>
 
-        <!-- Partners Section -->
+        <section class="intelligence-section reveal-on-scroll">
+            <div class="intel-grid">
+                <article class="intel-card glass-card hover-lift">
+                    <span class="intel-kicker">Macro & Private Credit</span>
+                    <h3>Crescimento moderado exige capital com tese, paciência e governança.</h3>
+                    <p>Com projeções de PIB ainda moderadas, inflação monitorada e investimentos produtivos pressionados, a seleção de ativos privados passa a depender de diligência, estruturação e clareza de risco.</p>
+                    <a href="https://www.ipea.gov.br/portal/categorias/45-todas-as-noticias/noticias/16325-ipea-eleva-projecao-do-pib-para-1-8-em-2026-e-mantem-inflacao-em-4-2" target="_blank" rel="noopener">Fonte: Ipea</a>
+                </article>
+
+                <article class="intel-card glass-card hover-lift featured-intel">
+                    <span class="intel-kicker">AI + Deep Tech</span>
+                    <h3>IA tornou-se infraestrutura de produtividade, não apenas uma vertical de software.</h3>
+                    <p>A OCDE aponta que empresas de IA concentraram 61% do valor global de venture capital em 2025. A leitura relevante para private markets está em eficiência, dados, automação e infraestrutura computacional.</p>
+                    <a href="https://www.oecd.org/en/publications/venture-capital-investments-in-artificial-intelligence-through-2025_a13752f5-en/full-report.html" target="_blank" rel="noopener">Fonte: OECD</a>
+                </article>
+
+                <article class="intel-card glass-card hover-lift">
+                    <span class="intel-kicker">Infrastructure + Geopolitics</span>
+                    <h3>Energia, cadeias de suprimento e soberania digital reposicionam ativos reais.</h3>
+                    <p>Geopolítica e segurança energética vêm redirecionando capital para infraestrutura essencial, redes, data centers, armazenamento e cadeias mais resilientes.</p>
+                    <a href="https://russellinvestments.com/content/ri/us/en/insights/russell-research/2026/03/Geopolitics-reshapes-private-infrastructure.html" target="_blank" rel="noopener">Fonte: Russell Investments</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="thesis-matrix reveal-on-scroll" aria-label="Matriz de tese de capital">
+            <div class="matrix-header glass-card">
+                <span class="mono-label">CAPITAL THESIS MATRIX</span>
+                <h2>Sinal de mercado → tese de capital → lente Broaden</h2>
+                <p>Uma gestora de ativos alternativos precisa traduzir ruído informacional em critérios de alocação, governança e parceria.</p>
+            </div>
+            <div class="matrix-grid glass-card">
+                <div class="matrix-cell matrix-title">Sinal</div>
+                <div class="matrix-cell matrix-title">Tese</div>
+                <div class="matrix-cell matrix-title">Lente Broaden</div>
+
+                <div class="matrix-cell">Juros e investimento produtivo pressionado</div>
+                <div class="matrix-cell">Capital privado com disciplina de entrada e estruturação</div>
+                <div class="matrix-cell">Originação seletiva, governança e visão de ciclo</div>
+
+                <div class="matrix-cell">VC LatAm mais concentrado em poucas empresas</div>
+                <div class="matrix-cell">Scale-up capital, venture debt e eficiência operacional</div>
+                <div class="matrix-cell">Crescimento com unit economics e preparação para liquidez</div>
+
+                <div class="matrix-cell">IA, tokenização e infraestrutura digital</div>
+                <div class="matrix-cell">Tecnologia aplicada a ativos reais e produtividade</div>
+                <div class="matrix-cell">Ponte entre TradFi, governança e inovação regulada</div>
+            </div>
+        </section>
+
+        <div class="red-box-header glass-card reveal-on-scroll" id="team">
+            <div class="box-dot"></div>
+            <h2>Corpo de sócios e executivos</h2>
+        </div>
+
         <section class="partners-section reveal-on-scroll">
             <div class="partners-grid">
-                <!-- Sócio 1 -->
-                <div class="partner-card glass-card hover-lift">
+                <article class="partner-card glass-card hover-lift">
+                    <figure class="partner-portrait">
+                        <img src="assets/partner-rodrigo-monteiro.webp" alt="Retrato institucional de Rodrigo Monteiro" loading="lazy">
+                    </figure>
                     <div class="partner-header">
                         <span class="mono-label">GP / FOUNDER</span>
                         <h3 class="partner-name">Rodrigo Monteiro</h3>
                     </div>
-                    <p class="partner-bio">
-                        General Partner na <strong>OurCrowd</strong> no Brasil (maior player israelense de equity crowdfunding). Especialista em ecossistemas de cibersegurança e internacionalização de startups via Stanford, Berkeley e MIT.
-                    </p>
+                    <p class="partner-bio">General Partner na OurCrowd no Brasil, com atuação em equity crowdfunding, internacionalização, cibersegurança e conexão entre ecossistemas globais de inovação.</p>
                     <div class="partner-tech-tags">
-                        <span class="mono-tag-sm">UCAM</span>
                         <span class="mono-tag-sm">VC Strategy</span>
-                        <span class="mono-tag-sm">GC Security</span>
+                        <span class="mono-tag-sm">Global Ecosystem</span>
+                        <span class="mono-tag-sm">Cybersecurity</span>
                     </div>
-                </div>
+                </article>
 
-                <!-- Sócio 2 -->
-                <div class="partner-card glass-card hover-lift">
+                <article class="partner-card glass-card hover-lift">
+                    <figure class="partner-portrait">
+                        <img src="assets/partner-aloysio-carvalho.webp" alt="Retrato institucional de Aloysio Carvalho" loading="lazy">
+                    </figure>
                     <div class="partner-header">
                         <span class="mono-label">OPERATIONS / PE</span>
                         <h3 class="partner-name">Aloysio Carvalho</h3>
                     </div>
-                    <p class="partner-bio">
-                        Ex-CEO e Sócio Líder da <strong>Falconi Capital</strong>. Engenheiro de produção (UFMG) com MBA no Insper e formação executiva no INSEAD. Sólido track record na direção da Gerdau e fundação da edtech FRST.
-                    </p>
+                    <p class="partner-bio">Ex-CEO e sócio líder da Falconi Capital, engenheiro de produção pela UFMG, MBA pelo Insper e formação executiva no INSEAD, com histórico em eficiência operacional e governança.</p>
                     <div class="partner-tech-tags">
-                        <span class="mono-tag-sm">UFMG</span>
-                        <span class="mono-tag-sm">INSEAD</span>
-                        <span class="mono-tag-sm">Gerdau Director</span>
+                        <span class="mono-tag-sm">Private Equity</span>
+                        <span class="mono-tag-sm">Operations</span>
+                        <span class="mono-tag-sm">Governance</span>
                     </div>
-                </div>
+                </article>
 
-                <!-- Sócio 3 -->
-                <div class="partner-card glass-card hover-lift">
+                <article class="partner-card glass-card hover-lift">
+                    <figure class="partner-portrait">
+                        <img src="assets/bruno-katayama.webp" alt="Retrato institucional de Bruno Katayama" loading="lazy">
+                    </figure>
                     <div class="partner-header">
                         <span class="mono-label">GROWTH EQUITY / WEB3</span>
                         <h3 class="partner-name">Bruno Katayama</h3>
                     </div>
-                    <p class="partner-bio">
-                        Engenheiro de Produção pela <strong>Escola Politécnica da USP</strong>. Ex-executivo de grandes bancos como JP Morgan, Itaú e Citibank. Membro Poli Angels e WOW Accelerator. Presença ativa na tokenização e Web3 em São Paulo.
-                    </p>
+                    <p class="partner-bio">Engenheiro de Produção pela Escola Politécnica da USP, com passagem por JP Morgan, Itaú e Citibank, atuação em Poli Angels, WOW Accelerator, tokenização e Web3.</p>
                     <div class="partner-tech-tags">
                         <span class="mono-tag-sm">Poli-USP</span>
-                        <span class="mono-tag-sm">JP Morgan</span>
-                        <span class="mono-tag-sm">Poli Angels</span>
+                        <span class="mono-tag-sm">TradFi</span>
+                        <span class="mono-tag-sm">Tokenization</span>
                     </div>
-                </div>
+                </article>
             </div>
 
-            <!-- Operational Directors Grid -->
             <div class="directors-summary glass-card">
-                <div class="director-box">
+                <div class="director-box director-with-photo">
+                    <img src="assets/director-sylvio-botto.webp" alt="Retrato institucional de Sylvio Botto de Barros" loading="lazy">
                     <span class="director-role">DIRETOR DE GESTÃO RESPONSÁVEL</span>
                     <span class="director-name text-white">Sylvio Botto de Barros</span>
                 </div>
-                <div class="director-box divider-box"></div>
-                <div class="director-box">
+                <div class="director-box director-with-photo">
+                    <img src="assets/director-nelson-grijo.webp" alt="Retrato institucional de Nelson Grijó Ferraz" loading="lazy">
                     <span class="director-role">RISCO / COMPLIANCE / PLDFT</span>
                     <span class="director-name text-white">Nelson Grijó Ferraz</span>
                 </div>
             </div>
         </section>
 
-        <!-- Red Box Header - Contact -->
+        <section class="rabelus-layer reveal-on-scroll glass-card">
+            <span class="mono-label">PROTOTYPE META-LAYER</span>
+            <h2>Uma demonstração de reposicionamento, velocidade e presença digital aplicada.</h2>
+            <p>Este protótipo evidencia como uma gestora com ativos institucionais sólidos pode ampliar presença online por meio de narrativa estratégica, inteligência de mercado, design premium e arquitetura visual orientada a retenção. A camada Rabelus Lab permanece deliberadamente sutil: ela aparece na qualidade da execução, não como ruído sobre a marca.</p>
+        </section>
+
         <div class="red-box-header glass-card reveal-on-scroll" id="contact">
             <div class="box-dot"></div>
-            <h2>Iniciar Parceria / Estabelecer Conexão</h2>
+            <h2>Iniciar conversa institucional</h2>
         </div>
 
-        <!-- Contact Form Section -->
         <section class="contact-section reveal-on-scroll">
             <div class="contact-grid">
-                <div class="contact-info-panel">
-                    <h3 class="contact-info-title">Atendimento Institucional</h3>
-                    <p class="contact-info-desc">
-                        A Broaden Capital opera exclusivamente via relacionamentos baseados em teses estruturadas. Se você possui uma empresa do setor tradicional com interesse em governança ou um negócio de alta tecnologia buscando escalabilidade, inicie uma comunicação formal.
-                    </p>
+                <div class="contact-info-panel glass-card">
+                    <h3 class="contact-info-title">Atendimento institucional</h3>
+                    <p class="contact-info-desc">A Broaden Capital opera por relacionamento, tese e governança. Investidores qualificados, empresários, family offices e parceiros estratégicos podem iniciar uma conversa formal para explorar alinhamento institucional.</p>
                     <div class="info-lines">
-                        <div class="info-line">
-                            <span class="info-label">LOCALIZAÇÃO</span>
-                            <span class="info-value">Rua Tabapuã, 500, salas 113 e 114 - São Paulo, SP</span>
-                        </div>
-                        <div class="info-line">
-                            <span class="info-label">CONTATO FONE</span>
-                            <span class="info-value">+55 11 2173-6464</span>
-                        </div>
-                        <div class="info-line">
-                            <span class="info-label">E-MAIL PRIVADO</span>
-                            <span class="info-value">contato@broadencapital.com.br</span>
-                        </div>
+                        <div class="info-line"><span class="info-label">LOCALIZAÇÃO</span><span class="info-value">Rua Tabapuã, 500, salas 113 e 114 · São Paulo, SP</span></div>
+                        <div class="info-line"><span class="info-label">CONTATO</span><span class="info-value">+55 11 2173-6464</span></div>
+                        <div class="info-line"><span class="info-label">E-MAIL</span><span class="info-value">contato@broadencapital.com.br</span></div>
                     </div>
                 </div>
                 <div class="contact-form-panel">
-                    <form class="themed-form glass-card" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso no Rabelus Lab Sandbox Gateway!');">
+                    <form class="themed-form glass-card" id="contact-form">
                         <div class="form-group">
                             <label for="name">NOME / INSTITUIÇÃO</label>
-                            <input type="text" id="name" placeholder="Inserir nome completo ou razão social..." required>
+                            <input type="text" id="name" placeholder="Nome completo ou instituição" required>
                         </div>
                         <div class="form-group">
                             <label for="email">E-MAIL CORPORATIVO</label>
                             <input type="email" id="email" placeholder="email@institucional.com.br" required>
                         </div>
                         <div class="form-group">
-                            <label for="msg">PROPOSTA DE VALOR / INTERESSE</label>
-                            <textarea id="msg" rows="5" placeholder="Descrição resumida do alinhamento operacional..." required></textarea>
+                            <label for="profile">PERFIL DE INTERESSE</label>
+                            <select id="profile" required>
+                                <option value="">Selecionar perfil</option>
+                                <option>Investidor qualificado / profissional</option>
+                                <option>Family office</option>
+                                <option>Empresário / founder</option>
+                                <option>Parceiro institucional</option>
+                            </select>
                         </div>
-                        <button type="submit" class="btn-submit glow-button">Enviar Mensagem Segura</button>
+                        <div class="form-group">
+                            <label for="msg">TESE / INTERESSE</label>
+                            <textarea id="msg" rows="5" placeholder="Descreva o alinhamento institucional desejado" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit glow-button">Solicitar conexão</button>
+                        <p class="form-note">Protótipo demonstrativo: o envio local não substitui contato formal com a gestora.</p>
                     </form>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-wrap">
+            <div class="footer-brand">
+                <img src="assets/broaden-logo-white.svg" alt="Broaden Capital">
+            </div>
             <div class="footer-legal">
                 <p>Copyright 2026 © Broaden Capital. Todos os direitos reservados.</p>
-                <p class="legal-disclaimer">
-                    A Broaden Capital é uma gestora independente de ativos alternativos. As informações contidas neste canal têm caráter informativo e educativo, não constituindo ofertas de compra ou venda de quaisquer ativos financeiros. Retornos passados não garantem performance futura.
-                </p>
+                <p class="legal-disclaimer">As informações apresentadas neste protótipo têm caráter exclusivamente institucional, informativo e demonstrativo. Não constituem oferta, solicitação, recomendação de investimento, análise individualizada, promessa de rentabilidade ou garantia de performance. Investimentos em ativos alternativos envolvem riscos, iliquidez e podem não ser adequados a todos os perfis.</p>
             </div>
             <div class="footer-designed">
-                <span>RE-ENGINEERED BY</span>
+                <span>PROTOTYPED BY</span>
                 <span class="rabelus-signature">RABELUS.LAB</span>
             </div>
         </div>
     </footer>
 
-    <!-- Failsafe Vanilla JS Mechanics -->
-    <script>
-        // 1. HIGH-VISIBILITY CANVAS PARTICLES (Explicitly brightened neon & white systems)
-        const canvas = document.getElementById('particles-canvas');
-        const ctx = canvas.getContext('2d');
-
-        let particlesArray = [];
-        let numberOfParticles = window.innerWidth < 768 ? 55 : 84;
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            particlesArray = [];
-            numberOfParticles = window.innerWidth < 768 ? 55 : 84;
-            initParticles();
-        }
-
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2.1 + 0.8;
-                this.speedX = Math.random() * 0.28 - 0.14;
-                this.speedY = Math.random() * 0.28 - 0.14;
-                this.color = Math.random() > 0.70 ? 'rgba(255, 62, 62, 0.85)' : 'rgba(255, 255, 255, 0.45)';
-            }
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                if (this.x > canvas.width) this.x = 0;
-                else if (this.x < 0) this.x = canvas.width;
-
-                if (this.y > canvas.height) this.y = 0;
-                else if (this.y < 0) this.y = canvas.height;
-            }
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.shadowColor = this.color; // Added shadow glow to particles to make them stand out
-                ctx.shadowBlur = 8;
-                ctx.fill();
-                ctx.shadowBlur = 0; // Restore shadow configs immediately
-            }
-        }
-
-        function initParticles() {
-            for (let i = 0; i < numberOfParticles; i++) {
-                particlesArray.push(new Particle());
-            }
-        }
-
-        function connectParticles() {
-            for (let a = 0; a < particlesArray.length; a++) {
-                for (let b = a + 1; b < particlesArray.length; b++) {
-                    let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + 
-                                   ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
-                    if (distance < 15000) {
-                        let alpha = 1 - (distance / 15000);
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${alpha * 0.15})`; // Slightly brightened connection trails
-                        ctx.lineWidth = 1.0;
-                        ctx.beginPath();
-                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-        }
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.globalCompositeOperation = 'lighter';
-            for (let i = 0; i < particlesArray.length; i++) {
-                particlesArray[i].update();
-                particlesArray[i].draw();
-            }
-            connectParticles();
-            ctx.globalCompositeOperation = 'source-over';
-            requestAnimationFrame(animateParticles);
-        }
-        animateParticles();
-
-        // 2. SMOTH ROTATING MOBILE OVERLAY GATES
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const navMenu = document.getElementById('nav-menu');
-        const overlay = document.getElementById('menu-overlay');
-
-        function toggleDrawer(e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            const isOpen = mobileBtn.classList.toggle('active');
-
-            if (isOpen) {
-                navMenu.classList.add('show');
-                overlay.classList.add('show');
-                document.body.classList.add('no-scroll');
-            } else {
-                navMenu.classList.remove('show');
-                overlay.classList.remove('show');
-                document.body.classList.remove('no-scroll');
-            }
-        }
-
-        mobileBtn.addEventListener('click', toggleDrawer, { capture: true });
-
-        document.querySelectorAll('.nav-link-item').forEach(link => {
-            const handleItemTap = () => {
-                mobileBtn.classList.remove('active');
-                navMenu.classList.remove('show');
-                overlay.classList.remove('show');
-                document.body.classList.remove('no-scroll');
-            };
-            link.addEventListener('click', handleItemTap);
-        });
-
-        const closeOnBackdrop = () => {
-            if (navMenu.classList.contains('show')) {
-                mobileBtn.classList.remove('active');
-                navMenu.classList.remove('show');
-                overlay.classList.remove('show');
-                document.body.classList.remove('no-scroll');
-            }
-        };
-        overlay.addEventListener('click', closeOnBackdrop, { capture: true });
-
-        // 3. ELEGANT ENTRANCE ANIMATION: INTERSECTION OBSERVER
-        // Add js-loaded to body FIRST so CSS knows JS is active
-        document.body.classList.add('js-loaded');
-
-        const revealElements = document.querySelectorAll('.reveal-on-scroll');
-        const observerOptions = {
-            root: null,
-            threshold: 0.08,
-            rootMargin: "0px 0px -40px 0px"
-        };
-
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        revealElements.forEach(element => {
-            revealObserver.observe(element);
-        });
-
-        // Fallback: if no IntersectionObserver support, show everything
-        if (!window.IntersectionObserver) {
-            revealElements.forEach(el => el.classList.add('active'));
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
