@@ -467,47 +467,6 @@ body.no-scroll {
     color: var(--text-muted);
 }
 
-/* 7. Matrix Section */
-.matrix-section {
-    position: relative;
-    z-index: 10 !important;
-}
-
-.matrix-wrapper {
-    overflow-x: auto;
-}
-
-.matrix-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-}
-
-.matrix-table th {
-    background-color: rgba(15, 16, 17, 0.95);
-    border-bottom: 1px solid var(--border-subtle);
-    padding: 10px 14px;
-    font-family: 'Fira Code', monospace;
-    font-size: 9px;
-    letter-spacing: 0.04em;
-    color: var(--accent);
-}
-
-.matrix-table td {
-    padding: 12px 14px;
-    border-bottom: 1px solid var(--border-subtle);
-    font-size: 12.5px;
-    color: var(--text-body);
-}
-
-.matrix-table tr:last-child td {
-    border-bottom: none;
-}
-
-.matrix-table tr:hover td {
-    background-color: rgba(255, 255, 255, 0.02);
-}
-
 .text-white {
     color: #ffffff !important;
 }
