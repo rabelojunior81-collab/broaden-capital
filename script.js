@@ -134,7 +134,7 @@ function setupInteractions() {
     if (form) {
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            alert('Protótipo demonstrativo: para contato real, utilize contato@broadencapital.com.br ou o telefone institucional informado.');
+            alert('Para contato formal, utilize contato@broadencapital.com.br ou o telefone institucional informado.');
         });
     }
 }

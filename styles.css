@@ -90,7 +90,7 @@ button, input, textarea, select { font: inherit; }
 .signal-card { padding: 22px; min-height: 190px; }
 .stat-number { display: block; font-size: clamp(2.2rem, 4vw, 4rem); font-weight: 900; letter-spacing: -0.06em; color: var(--text); }
 .stat-label { display: block; color: var(--coral-2); font-size: 0.72rem; margin: 6px 0 14px; }
-.signal-card p, .section-intro p, .pillar-desc, .intel-card p, .matrix-header p, .partner-bio, .contact-info-desc, .legal-disclaimer, .rabelus-layer p { color: var(--soft); }
+.signal-card p, .section-intro p, .pillar-desc, .intel-card p, .matrix-header p, .partner-bio, .contact-info-desc, .legal-disclaimer { color: var(--soft); }
 .red-box-header { display: flex; align-items: center; gap: 14px; padding: 18px 20px; margin: 70px 0 24px; border-left: 4px solid var(--coral); }
 .red-box-header h2 { font-size: clamp(1.15rem, 2.6vw, 1.8rem); letter-spacing: -0.03em; text-transform: uppercase; }
 .section-intro { max-width: 880px; margin-bottom: 24px; }
@@ -112,7 +112,7 @@ button, input, textarea, select { font: inherit; }
 .featured-intel { border-color: var(--line-strong); }
 .thesis-matrix { margin-top: 42px; }
 .matrix-header { padding: 26px; margin-bottom: 16px; }
-.matrix-header h2, .rabelus-layer h2 { margin: 10px 0; font-size: clamp(1.5rem, 3.2vw, 2.6rem); letter-spacing: -0.05em; line-height: 1.05; }
+.matrix-header h2 { margin: 10px 0; font-size: clamp(1.5rem, 3.2vw, 2.6rem); letter-spacing: -0.05em; line-height: 1.05; }
 .matrix-grid { display: grid; grid-template-columns: 0.9fr 1.05fr 1.05fr; overflow: hidden; }
 .matrix-cell { min-height: 90px; padding: 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--soft); }
 .matrix-cell:nth-child(3n) { border-right: none; }
@@ -130,7 +130,6 @@ button, input, textarea, select { font: inherit; }
 .director-with-photo img { width: 74px; height: 74px; justify-self: center; border-radius: 50%; object-fit: cover; object-position: center; background: rgba(0,0,0,0.18); border: 1px solid rgba(255,255,255,0.16); box-shadow: 0 0 0 8px rgba(255,255,255,0.025); grid-row: span 2; }
 .director-role { color: var(--muted); font-size: 0.66rem; }
 .director-name { font-size: 1.08rem; font-weight: 800; }
-.rabelus-layer { margin-top: 72px; padding: clamp(24px, 4vw, 48px); border-color: rgba(201,139,92,0.3); background: linear-gradient(145deg, rgba(201,139,92,0.09), rgba(13,16,24,0.72)); }
 .contact-grid { grid-template-columns: 0.85fr 1.15fr; align-items: start; }
 .contact-info-panel, .themed-form { padding: clamp(22px, 3vw, 34px); }
 .contact-info-title { font-size: 1.7rem; letter-spacing: -0.04em; margin-bottom: 14px; }
@@ -153,7 +152,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--line-strong); bo
 .footer-legal p:first-child { font-weight: 700; margin-bottom: 8px; }
 .legal-disclaimer { font-size: 0.78rem; }
 .footer-designed { display: grid; gap: 2px; text-align: right; font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); }
-.rabelus-signature { color: var(--coral-2); font-weight: 800; letter-spacing: 0.08em; }
+.footer-accent { color: var(--coral-2); font-weight: 800; letter-spacing: 0.08em; }
 .reveal-on-scroll { opacity: 1; transform: translateY(0); }
 .js-enabled .reveal-on-scroll { opacity: 0; transform: translateY(28px); transition: opacity 720ms ease, transform 720ms cubic-bezier(.2,.7,.2,1); }
 .js-enabled .reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
@@ -195,7 +194,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--line-strong); bo
     .hero-title { font-size: clamp(2.1rem, 12.8vw, 3.2rem); letter-spacing: -0.055em; overflow-wrap: anywhere; word-break: normal; }
     .hero-actions, .badge-row { flex-direction: column; }
     .btn-primary, .btn-secondary { width: 100%; }
-    .signal-card, .pillar-card, .intel-card, .matrix-header, .rabelus-layer, .contact-info-panel, .themed-form { padding: 20px; }
+    .signal-card, .pillar-card, .intel-card, .matrix-header, .contact-info-panel, .themed-form { padding: 20px; }
     .matrix-header h2 { font-size: clamp(1.45rem, 8vw, 2rem); line-height: 1.08; }
     .matrix-cell { font-size: 0.98rem; line-height: 1.55; }
     .red-box-header { margin-top: 54px; }
